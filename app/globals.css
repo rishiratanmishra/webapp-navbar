@@ -2,26 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+h3{
+  font-size: 1.5rem;
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-dark: 33, 33, 33; /* Define the dark background color */
+    
   }
+  
+  /* @media (prefers-color-scheme: dark) {
+    :root {
+     --background-color-dark: #202020;
+     --text-color:#f8f0f0;
+
+    }
+  }
+   */
+  @media (prefers-color-scheme: dark) {
+    :root {
+     --background-color-dark: #121317;
+     --text-color:#929E9E;
+    }
+  }
+
+
+  
+  body {
+    color: var(--text-color);
+    background-color: var(--background-color-dark);
+  }
+  
+
+  .main-navbar{
+    display: flex;
+    height: 5rem;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+  .side-navbar{
+    height: 100vh;
+    position: relative;
+  }
+
+
+  .horizontal-navbar{
+    margin-left: 10rem ;
+    width: 100vw;
+  }
+
+  /* body child pass */
+
+.body-child-pass{
+margin-left: 10rem;
+padding:2rem ;
+margin-top: 5rem;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
+  /* sm: */
+  @media (max-width: 640px) {
+
+    
+
+    .side-navbar{
+      display: none;
+    }
+
+
+
+    .horizontal-navbar{
+      margin-left: 0rem ;
+    }
+  
+    /* body child pass */
+  
+  .body-child-pass{
+  margin-left: 0rem;
+  padding:2rem ;
+  margin-top: 5rem;
+  }
+
+
+    }	
+
+
+
+
+
+
+
+
+
+
+  /* md: */
+  @media (min-width: 768px) { 
+  
+  
+  }	
+  /* lg: */
+  @media (min-width: 1024px) {
+    
+  
+  }	
+
+
+
+
+  /* xl:
+  @media (min-width: 1280px) { ... }	
+  2xl:
+  @media (min-width: 1536px) { ... } */
